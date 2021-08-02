@@ -11,7 +11,7 @@ import { Article } from './Article'
 export class ArticleService {
 
   // api
-  apiUrl: string = 'https://api.lanjrud.ir/';
+  apiUrl: string = 'https://api.lanjrud.ir';
   // apiUrl: string = 'http://localhost:8000';
 
   // Http Headers
