@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8" *ngIf="article">
+      <div class="card-header">
+        <h3 class="h3">
+          {{ article.title }}
+        </h3>
+      </div>
+      <p class="card-text">{{ article.description }}</p>
+      <br />
+      <p class="card-text">{{ article.content }}</p>
+    </div>
+  </div>
+</div>
