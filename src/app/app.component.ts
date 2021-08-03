@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
 
     // metatags service
     this.metatag.addTags([
-      // { name: 'description', content: 'وبسایت روستای بزرگ لنجرود' },
+      { name: 'description', content: 'اولین و تنها وبسایت روستای بزرگ لنجرود' },
       { name: 'robots', content: 'index, follow' },
       { name: 'author', content: 'Ehsan Ghaffar' },
     ])
