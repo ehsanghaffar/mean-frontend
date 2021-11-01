@@ -5,13 +5,15 @@ import { AboutComponent } from './routes/about/about.component';
 import { ArticlesComponent } from './routes/articles/articles.component';
 import { SingleComponent } from './routes/articles/single/single.component';
 import { HomeComponent } from './routes/home/home.component';
+import { NotFoundComponent } from './routes/not-found/not-found.component'
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'articles', component: ArticlesComponent },
   { path: 'articles/create', component: AddArticleComponent },
-  { path: 'articles/:id', component: SingleComponent }
+  { path: 'articles/:id', component: SingleComponent },
+  { path: '404', component: NotFoundComponent }
 ];
 
 @NgModule({

@@ -4,7 +4,7 @@ import { Title, Meta } from '@angular/platform-browser';
 
 
 import { ArticleService } from '../../../services/article.service'
-import { Article } from '../../../services/Article';
+import { Article } from '../../../types/Article';
 
 @Component({
   selector: 'app-add-article',

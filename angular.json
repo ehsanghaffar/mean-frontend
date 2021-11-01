@@ -28,6 +28,7 @@
             "inlineStyleLanguage": "sass",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/assets/styles.sass",
               "./node_modules/bootstrap/scss/bootstrap.scss",
               "./node_modules/shabnam-font/dist/font-face.css"
@@ -100,7 +101,7 @@
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "sass",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.sass"],
+            "styles": ["./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css", "src/styles.sass"],
             "scripts": []
           }
         }

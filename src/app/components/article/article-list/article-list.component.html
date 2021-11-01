@@ -1,34 +1,18 @@
-<div class="container">
-  <!-- <div class="row">
-    <a class="btn btn-primary" [routerLink]="['/articles/create']">ساختن</a>
-  </div> -->
-  <div class="row">
-    <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
-      <div class="col-md-6 px-0">
-        <h1 class="display-4 fst-italic">مطالب و مقالات لنجرود</h1>
-        <p class="lead my-3">
-          در این صفحه مقالات و مطالب جالب درباره روستای لنجرود را قرار می‌دهیم
-        </p>
-        <!-- <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p> -->
-      </div>
-    </div>
-  </div>
-  <div class="row">
+
+  <app-articles-shimmer *ngIf="loading"></app-articles-shimmer>
+  <div class="row" *ngIf="!loading">
     <div class="col-md-3 p-3" *ngFor="let article of articles; let i = index">
-      <div class="card shadow-sm rounded-lg">
-        <img src="../../../../assets/images/lanjrud.png" class="card-img p-2" />
-        <div class="card-body">
-          <h3 class="card-title">{{ article.title }}</h3>
-          <p class="card-text">{{ article.description | slice: 0:40 }}...</p>
-          <!-- <p class="card-text">{{ article.content | slice: 0:30 }}...</p> -->
-          <a
-            class="btn btn-primary"
-            [routerLink]="['/articles/' + article._id]"
-          >
-            خواندن مقاله
-          </a>
-        </div>
-      </div>
+      <mat-card class="example-card shadow">
+        <img height="200" mat-card-image src="https://via.placeholder.com/120/673ab7bb/ffffff?text=lanjrud" alt="{{ article.title }}">
+        <mat-card-content class="p-2">
+          <mat-card-title>{{ article.title }}</mat-card-title>
+          <p class="text-muted">
+            {{ article.description | slice: 0:50 }}...
+          </p>
+        </mat-card-content>
+        <mat-card-actions class="text-start">
+          <button mat-raised-button color="primary" [routerLink]="['/articles/' + article._id]">ادامه مطلب</button>
+        </mat-card-actions>
+      </mat-card>
     </div>
   </div>
-</div>

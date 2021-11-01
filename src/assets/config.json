@@ -1,0 +1,25 @@
+{
+  "apiPrefix": "/api/",
+  "test": "test",
+  "uploadLimitSizeByte": 1000000,
+  "article": {
+    "title": {
+      "min": 1,
+      "max": 50
+    },
+    "description": {
+      "min": 1,
+      "max": 300
+    },
+    "slug": {
+      "min": 4,
+      "max": 50,
+      "pattern": "/^[a-zA-Z0-9-]+$/"
+    },
+    "search": {
+      "q": {
+        "pattern": "/^[a-zA-Z0-9-+]+$/"
+      }
+    }
+  }
+}

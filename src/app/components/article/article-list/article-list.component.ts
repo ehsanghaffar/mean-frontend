@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Article } from 'src/app/services/Article';
+import { Article } from 'src/app/types/Article';
 import { ArticleService } from '../../../services/article.service';
 import { Title, Meta } from '@angular/platform-browser';
 
@@ -10,7 +10,8 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class ArticleListComponent implements OnInit {
   articleListTitle = 'مقالات روستای لنجرود'
-  articles: Article | any;
+  articles: Article | any
+  loading: boolean = false;
 
   constructor(
     private articlesService: ArticleService,
@@ -19,8 +20,9 @@ export class ArticleListComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.loading = true
     this.articlesService.getArticles().subscribe(res => {
-      console.log(res);
+      this.loading = false;
       this.articles = res
       this.metaTitle.setTitle(this.articleListTitle)
     })

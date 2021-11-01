@@ -1,0 +1,14 @@
+<div class="">
+  <div class="col-md-3 p-3" *ngFor="let item of count">
+    <div class="card shadow-sm rounded-lg">
+      <ngx-shimmer-loading class="card-img p-2" [shape]="'rect'" [height]="'100px'" [width]="'200px'">
+      </ngx-shimmer-loading>
+      <div class="card-body">
+        <ngx-shimmer-loading class="align-self-center" [shape]="'rect'" [width]="'100px'"></ngx-shimmer-loading>
+        <ngx-shimmer-loading class="align-self-center" [shape]="'rect'" [width]="'24px'"></ngx-shimmer-loading>
+        <!-- <p class="card-text">{{ article.content | slice: 0:30 }}...</p> -->
+        <ngx-shimmer-loading [shape]="'rect'" [width]="'50px'" [height]="'50px'"></ngx-shimmer-loading>
+      </div>
+    </div>
+  </div>
+</div>
