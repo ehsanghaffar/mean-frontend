@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col" *ngIf="article">
+      <div class="text-center my-5">
+        <h3 class="h3">
+          {{ article.title }}
+        </h3>
+        <div class="d-flex justify-content-center mb-4">
+          <div class="text-center" style="width: 500px;">
+          <p class="card-text text-muted">{{ article.description }}</p>
+          </div>
+        </div>
+      </div>
+      <br />
+      <p class="card-text">{{ article.content }}</p>
+    </div>
+  </div>
+</div>

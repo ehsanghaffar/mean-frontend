@@ -1,0 +1,12 @@
+{
+  "/api/*": {
+    "changeOrigin": true,
+    "headers": {
+      "x-forwarded-host": "localhost:4200",
+      "x-forwarded-proto": "http"
+    },
+    "logLevel": "debug",
+    "secure": false,
+    "target": "http://api.lanjrud.ir"
+  }
+}

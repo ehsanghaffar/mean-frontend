@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --proxy-config proxy.conf.json",
+    "start:local": "ng serve --proxy-config proxy-local.conf.json",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -11,14 +12,17 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~12.1.0-",
+    "@angular/cdk": "^12.2.12",
     "@angular/common": "~12.1.0-",
     "@angular/compiler": "~12.1.0-",
     "@angular/core": "~12.1.0-",
     "@angular/forms": "~12.1.0-",
+    "@angular/material": "^12.2.12",
     "@angular/platform-browser": "~12.1.0-",
     "@angular/platform-browser-dynamic": "~12.1.0-",
     "@angular/router": "~12.1.0-",
     "bootstrap": "^5.0.0-beta3",
+    "ngx-shimmer-loading": "^0.0.5",
     "rxjs": "~6.6.0",
     "shabnam-font": "^5.0.0",
     "tslib": "^2.2.0",
