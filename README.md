@@ -1,5 +1,7 @@
 # Lanjrud website Front-End
 
+<img src="./src/assets/images/lanjrud.png" alt="lanjrud website" width="300" />
+
 Front End of Lanjrud website: [here](https://www.lanjrud.ir)
 
 This project is create by Angular 12
