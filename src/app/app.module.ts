@@ -20,6 +20,7 @@ import { ArticlesShimmerComponent } from './components/article/article-list/arti
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule } from './app-material/app-material.module';
 import { NotFoundComponent } from './routes/not-found/not-found.component';
+import { EditorMarkupComponent } from './components/editor-markup/editor-markup.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { NotFoundComponent } from './routes/not-found/not-found.component';
     ArticlesComponent,
     SingleComponent,
     ArticlesShimmerComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    EditorMarkupComponent
   ],
   imports: [
     BrowserModule,
