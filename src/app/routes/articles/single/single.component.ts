@@ -34,10 +34,10 @@ export class SingleComponent implements OnInit {
         this.article = article
         this.articleTitle = article.title
         this.articleDesc = article.description
-        this.titleService.setTitle(this.articleTitle)
-        this.metatags.updateTag(
-          { name: 'description', content: this.articleDesc }
-        )
+        // this.titleService.setTitle(this.articleTitle)
+        // this.metatags.updateTag(
+        //   { name: 'description', content: this.articleDesc }
+        // )
       })
 
   }

@@ -1,31 +1,32 @@
 <div>
   <div class="col-md-12">
+    <form #articleForm="ngForm" (ngSubmit)="addArticle(articleForm)" >
     <div class="form-group">
       <input
+      name="title"
         class="form-control"
         type="text"
         placeholder="title"
-        [(ngModel)]="articleDetails.title"
+        ngModel
+        #title="ngModel"
       />
     </div>
     <div class="form-group">
       <input
+      name="description"
         class="form-control"
         type="text"
-        placeholder="title"
-        [(ngModel)]="articleDetails.description"
+        placeholder="description"
+        ngModel
+        #description="ngModel"
       />
     </div>
     <div class="form-group">
-      <input
-        class="form-control"
-        type="text"
-        placeholder="title"
-        [(ngModel)]="articleDetails.content"
-      />
+        <div class="app-editor p-2 rounded-2" #editable [(ngModel)]="content" [ngModelOptions]="{standalone: true}" [innerHtml]="content"></div>
     </div>
     <div class="form-group">
-      <button class="btn btn-success" (click)="addArticle()">اضافه کردن</button>
+      <button class="btn btn-success" type="submit">اضافه کردن</button>
     </div>
+    </form>
   </div>
 </div>
