@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
 
 import { ArticleService } from '../../../services/article.service'
-import { Article } from '../../../types/Article';
+import { Article } from '../../../dto/Article';
 import { NgForm } from '@angular/forms';
 
 declare const MediumEditor: any;
@@ -26,10 +26,14 @@ export class AddArticleComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.editor = new MediumEditor(this.editable.nativeElement, {
-
+      placeholder: {
+        text:  'متن را اینجا وارد کنید',
+        hideOnClick: true
+      },
       toolbar: {
         allowMultiParagraphSelection: true,
-        buttons: ['bold', 'italic', 'underline', 'anchor', 'h2', 'h3', 'h4', 'h5', 'quote',
+        static: true,
+        buttons: ['bold', 'italic', 'underline', 'justifyCenter', 'anchor', 'h2', 'h3', 'h4', 'h5', 'quote',
           {
             name: 'pre',
             action: 'append-pre',

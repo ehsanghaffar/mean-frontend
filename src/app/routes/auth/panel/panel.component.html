@@ -1,0 +1,28 @@
+<main>
+  <div class="container">
+    <div class="row">
+      <section>
+        <div class="text-center">
+          <h1 class="display-5 fw-bold">پنل کاربری</h1>
+          <div class="col-lg-8 mx-auto">
+            <p class="lead mb-4">در این قسمت میتوانید مطالب جدید وارد کنید</p>
+            <p class="manifest-alert">
+              این وبسایت به صورت آزمایشی راه‌اندازی شده است و به زودی تمامی
+              بخش‌های آن فعال خواهد شد
+            </p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="d-flex justify-content-center">
+          <div class="my-3">
+            <button mat-stroked-button color="primary" [routerLink]="['/articles/create']">
+              <mat-icon>add_box</mat-icon>
+              اضافه‌کردن مقاله جدید
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>

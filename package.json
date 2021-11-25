@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "~12.1.0-",
     "@angular/router": "~12.1.0-",
     "bootstrap": "^5.0.0-beta3",
+    "jwt-decode": "^3.1.2",
     "medium-editor": "^5.23.3",
     "ngx-shimmer-loading": "^0.0.5",
     "rxjs": "~6.6.0",

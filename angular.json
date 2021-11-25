@@ -28,7 +28,7 @@
             "inlineStyleLanguage": "sass",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "src/assets/custom-theme.scss",
               "src/assets/styles.sass",
               "./node_modules/medium-editor/dist/css/medium-editor.min.css",
               "./node_modules/medium-editor/dist/css/themes/default.min.css",

@@ -1,32 +1,72 @@
-<div>
-  <div class="col-md-12">
-    <form #articleForm="ngForm" (ngSubmit)="addArticle(articleForm)" >
-    <div class="form-group">
-      <input
-      name="title"
-        class="form-control"
-        type="text"
-        placeholder="title"
-        ngModel
-        #title="ngModel"
-      />
+<main>
+  <div class="container">
+    <div class="row">
+      <section>
+        <div class="text-center">
+          <h1 class="display-5 fw-bold">اضافه‌کردن مقاله</h1>
+          <div class="col-lg-8 mx-auto">
+            <p class="lead mb-4">
+              مطالب جالب یا خاطرات خود را بنویسید
+            </p>
+            <p class="manifest-alert">
+              این وبسایت به صورت آزمایشی راه‌اندازی شده است و به زودی تمامی
+              بخش‌های آن فعال خواهد شد
+            </p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div>
+          <div class="col-md-12">
+            <form #articleForm="ngForm" (ngSubmit)="addArticle(articleForm)">
+              <div class="form-group">
+                <mat-form-field appearance="outline">
+                  <mat-label>موضوع مطلب</mat-label>
+                <input
+                  matInput
+                  name="title"
+                  class="form-control"
+                  type="text"
+                  placeholder="مثال: تاریخ لنجرود"
+                  ngModel
+                  #title="ngModel"
+                />
+                </mat-form-field>
+              </div>
+              <div class="form-group">
+                <mat-form-field appearance="outline">
+                  <mat-label>توضیح کوتاه</mat-label>
+                <input
+                  matInput
+                  name="description"
+                  class="form-control"
+                  type="text"
+                  placeholder="مثال: این مطلب درباره تاریخ لنجرود است"
+                  ngModel
+                  #description="ngModel"
+                />
+                </mat-form-field>
+              </div>
+              <div class="form-group">
+                  <mat-label>متن مطلب</mat-label>
+                <div
+                  class="app-editor p-2 rounded-2 border"
+                  #editable
+                  [(ngModel)]="content"
+                  [ngModelOptions]="{ standalone: true }"
+                  [innerHtml]="content"
+                ></div>
+
+              </div>
+              <div class="form-group my-2">
+                <button mat-button mat-raised-button color="primary" type="submit">
+                  اضافه کردن
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
     </div>
-    <div class="form-group">
-      <input
-      name="description"
-        class="form-control"
-        type="text"
-        placeholder="description"
-        ngModel
-        #description="ngModel"
-      />
-    </div>
-    <div class="form-group">
-        <div class="app-editor p-2 rounded-2" #editable [(ngModel)]="content" [ngModelOptions]="{standalone: true}" [innerHtml]="content"></div>
-    </div>
-    <div class="form-group">
-      <button class="btn btn-success" type="submit">اضافه کردن</button>
-    </div>
-    </form>
   </div>
-</div>
+</main>

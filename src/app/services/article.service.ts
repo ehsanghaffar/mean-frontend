@@ -5,7 +5,7 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 import { AppConfigService } from './app-config.service'
 
 
-import { Article } from '../types/Article'
+import { Article } from '../dto/Article'
 
 @Injectable({
   providedIn: 'root'

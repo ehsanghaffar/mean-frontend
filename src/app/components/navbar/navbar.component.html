@@ -21,13 +21,19 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" [routerLink]="['/articles']" tabindex="-1"
-            >مقالات</a
+            >مطالب</a
           >
         </li>
       </ul>
       <div class="text-end">
-        <button type="button" class="btn btn-outline-light mx-1">ورود</button>
-        <button type="button" class="btn btn-warning mx-1">عضویت</button>
+        <button type="button" *ngIf="!isAuthenticated" [routerLink]="['/login']"  class="btn btn-outline-light mx-1">ورود</button>
+        <button type="button" *ngIf="!isAuthenticated" [routerLink]="['/register']" class="btn btn-warning mx-1">عضویت</button>
+        <button type="button" *ngIf="isAuthenticated" [routerLink]="['/panel']" mat-icon-button color="primary">
+          <mat-icon>home</mat-icon>
+          <span class="px-1">
+          پنل کاربری
+          </span>
+        </button>
       </div>
     </div>
   </div>

@@ -27,6 +27,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatDialogModule} from '@angular/material/dialog';
 import {ScrollingModule} from '@angular/cdk/scrolling';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 @NgModule({
@@ -60,7 +61,8 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
     MatStepperModule,
     MatSnackBarModule,
     MatDialogModule,
-    ScrollingModule
+    ScrollingModule,
+    MatProgressSpinnerModule
   ],
   exports: [
     CommonModule,
@@ -91,7 +93,8 @@ import {ScrollingModule} from '@angular/cdk/scrolling';
     MatStepperModule,
     MatSnackBarModule,
     MatDialogModule,
-    ScrollingModule
+    ScrollingModule,
+    MatProgressSpinnerModule
   ]
 
 })

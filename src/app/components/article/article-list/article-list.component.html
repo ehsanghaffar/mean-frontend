@@ -3,9 +3,11 @@
   <div class="row" *ngIf="!loading">
     <div class="col-md-3 p-3" *ngFor="let article of articles; let i = index">
       <mat-card class="example-card shadow">
-        <img height="200" mat-card-image src="https://via.placeholder.com/120/673ab7bb/ffffff?text=lanjrud" alt="{{ article.title }}">
+        <img height="200" mat-card-image src="../../../../assets/images/ffffff.png" alt="{{ article.title }}">
         <mat-card-content class="p-2">
-          <mat-card-title>{{ article.title }}</mat-card-title>
+          <mat-card-title>
+            <h5>{{ article.title }}</h5>
+          </mat-card-title>
           <p class="text-muted">
             {{ article.description | slice: 0:50 }}...
           </p>
