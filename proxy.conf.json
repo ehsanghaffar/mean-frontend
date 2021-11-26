@@ -6,7 +6,7 @@
       "x-forwarded-proto": "http"
     },
     "logLevel": "debug",
-    "secure": false,
-    "target": "http://api.lanjrud.ir"
+    "secure": true,
+    "target": "https://api.lanjrud.ir"
   }
 }
