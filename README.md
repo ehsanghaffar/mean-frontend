@@ -2,6 +2,8 @@
 
 <img src="./src/assets/images/lanjrud.png" alt="lanjrud website" width="300" />
 
+[![wakatime](https://wakatime.com/badge/github/ehsanghaffarii/lanjrud-angular.svg)](https://wakatime.com/badge/github/ehsanghaffarii/lanjrud-angular)
+
 Front End of Lanjrud website: [here](https://www.lanjrud.ir)
 
 This project is create by Angular 12

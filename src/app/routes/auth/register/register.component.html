@@ -1,0 +1,136 @@
+<main>
+  <div class="container">
+    <div class="row">
+      <section>
+        <div class="text-center">
+          <h1 class="display-5 fw-bold">عضویت در وبسایت</h1>
+          <div class="col-lg-8 mx-auto">
+            <p class="lead mb-4">
+              با عضویت در سایت از امکانات بیشتر بهره‌مند شوید
+            </p>
+            <p class="manifest-alert">
+              این وبسایت به صورت آزمایشی راه‌اندازی شده است و به زودی تمامی
+              بخش‌های آن فعال خواهد شد
+            </p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="d-flex justify-content-center">
+          <form [formGroup]="registerForm">
+            <div class="col">
+              <p>
+                <mat-form-field appearance="outline">
+                  <mat-label>نام</mat-label>
+                  <input
+                    class="label standard-field"
+                    type="text"
+                    name="name"
+                    formControlName="nameInput"
+                    matInput
+                    autocomplete="off"
+                    placeholder=" مثال: احسان"
+                  />
+                  <mat-icon matSuffix>person</mat-icon>
+                  <mat-error *ngIf="errorHandling('nameInput', 'required')">
+                    نام خود را وارد کنید
+                  </mat-error>
+                </mat-form-field>
+              </p>
+            </div>
+            <div class="col">
+              <p>
+                <mat-form-field appearance="outline">
+                  <mat-label>ایمیل یا شماره تلفن</mat-label>
+                  <input
+                    class="label standard-field"
+                    type="email"
+                    name="email"
+                    formControlName="emailInput"
+                    matInput
+                    autocomplete="off"
+                    placeholder=" مثال: ۰۹۱۹۵۰۶۳۱۸۸"
+                  />
+                  <mat-icon matSuffix>phone</mat-icon>
+                  <mat-error *ngIf="errorHandling('emailInput', 'required')">
+                    ایمیل یا شماره تلفن لازم است
+                  </mat-error>
+                </mat-form-field>
+              </p>
+            </div>
+            <div class="col">
+              <p>
+                <mat-form-field appearance="outline">
+                  <mat-label>رمز عبور</mat-label>
+                  <input
+                    class="label standard-field"
+                    [type]="hide ? 'password' : 'text'"
+                    name="password"
+                    formControlName="passwordInput"
+                    matInput
+                    autocomplete="off"
+                    placeholder=" "
+                  />
+                  <button
+                    mat-icon-button
+                    matSuffix
+                    (click)="hide = !hide"
+                    [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide"
+                  >
+                    <mat-icon>{{
+                      hide ? "visibility_off" : "visibility"
+                    }}</mat-icon>
+                  </button>
+                  <mat-error *ngIf="errorHandling('passwordInput', 'required')">
+                    رمزعبور لازم است
+                  </mat-error>
+                </mat-form-field>
+              </p>
+            </div>
+            <div class="col">
+              <p>
+                <mat-form-field appearance="outline">
+                  <mat-label> تکرار رمز عبور</mat-label>
+                  <input
+                    class="label standard-field"
+                    [type]="hide ? 'password' : 'text'"
+                    name="password"
+                    formControlName="confirmPasswordInput"
+                    matInput
+                    autocomplete="off"
+                    placeholder=" "
+                  />
+                  <button
+                    mat-icon-button
+                    matSuffix
+                    (click)="hide = !hide"
+                    [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide"
+                  >
+                    <mat-icon>{{
+                      hide ? "visibility_off" : "visibility"
+                    }}</mat-icon>
+                  </button>
+                  <mat-error *ngIf="errorHandling('confirmPasswordInput', 'required')">
+                   تکرار رمزعبور لازم است
+                  </mat-error>
+                </mat-form-field>
+              </p>
+            </div>
+            <button
+              mat-button
+              class="w-100 py-2"
+              mat-raised-button
+              type="submit"
+              (click)="onSignup()"
+              color="primary"
+            >
+              ثبت‌ نام
+            </button>
+          </form>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>

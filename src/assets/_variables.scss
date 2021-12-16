@@ -1,1 +1,102 @@
 $shabnam: "Shabnam", sans-serif;
+
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+$main-blue: #0000f6;
+$main-navy-blue: #2B324D;
+$main-black: #0C0C0C;
+$main-gray: #2F2F2F;
+$main-white: #FFFFFF;
+
+$blue-shades: (
+  "light": #AFAFFF,
+  "dark": #000083
+);
+
+$navy-blue-shades: (
+  "light": #6D7BAE,
+  "dark": #1B1F30
+);
+
+$gray-shades: (
+  "light": #EDEDED,
+  "dark": #CBCBCB
+);
+
+$white-shades: (
+  "light": #F2F2F2,
+  "dark": #EDEDED
+);
+
+$xxs-size: 8px;
+$xs-size: 16px;
+$s-size: 24px;
+$m-size: 32px;
+$l-size: 40px;
+$xl-size: 48px;
+$xxl-size: 56px;
+$xxxl-size: 64px;
+
+
+
+
+$primary-color: #000083; // Blue/02
+$accent-color: #2b324d; // Secondary-Navy-blue #2B324D
+$warm-color: #fff8e1;
+
+$B-W-2f2f2f: #2f2f2f; // B-W/2f2f2f
+$title-color: #0c0c0c; // Back-0c0c0c
+$Black-white: hsl(0, 0%, 96%); // B-W/F6f6f6
+$B-W-cbcbcb: #cbcbcb; // B-W/cbcbcb
+
+$primary-blue-color: #0000f6; // Primary-blue #0000F6
+$gray-color: #f2f2f2;
+
+$Warning-light: #f4b740; // Warning/light
+$Warning-back: #fff8e1; // Warnin/back
+$warn-dark-color: #a9791c; // Warning/dark
+
+$suc-back: #f3fdfa; // suc/back
+$suc-dark: #00966d; // suc/dark
+
+$Eror-Back: #fff2f2; // Eror/Back
+$Eror-Dark: #c30000; // Eror/Dark
+
+$vector-color: #292d32;
+
+.vector {
+  color: $vector-color !important;
+}
+
+.bg-gray {
+  background: $gray-color !important;
+}
+
+.secondary-color {
+  color: $accent-color !important;
+}
+.secondary-back-color {
+  background: $accent-color !important;
+}
+
+.primary-blue-color {
+  color: $primary-blue-color;
+}
+
+.primary-blue-back {
+  background-color: $primary-blue-color !important;
+}
+
+.B-W-cbcbcb-color {
+  color: $B-W-cbcbcb;
+}
+
+.display-mobile {
+  display: none;
+}

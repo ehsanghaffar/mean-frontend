@@ -20,6 +20,10 @@ import { ArticlesShimmerComponent } from './components/article/article-list/arti
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule } from './app-material/app-material.module';
 import { NotFoundComponent } from './routes/not-found/not-found.component';
+import { EditorMarkupComponent } from './components/editor-markup/editor-markup.component';
+import { RegisterComponent } from './routes/auth/register/register.component';
+import { LoginComponent } from './routes/auth/login/login.component';
+import { PanelComponent } from './routes/auth/panel/panel.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,11 @@ import { NotFoundComponent } from './routes/not-found/not-found.component';
     ArticlesComponent,
     SingleComponent,
     ArticlesShimmerComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    EditorMarkupComponent,
+    RegisterComponent,
+    LoginComponent,
+    PanelComponent
   ],
   imports: [
     BrowserModule,

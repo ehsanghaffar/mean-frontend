@@ -28,15 +28,20 @@
             "inlineStyleLanguage": "sass",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "src/assets/custom-theme.scss",
               "src/assets/styles.sass",
+              "./node_modules/medium-editor/dist/css/medium-editor.min.css",
+              "./node_modules/medium-editor/dist/css/themes/default.min.css",
               "./node_modules/bootstrap/scss/bootstrap.scss",
               "./node_modules/shabnam-font/dist/font-face.css"
             ],
             "stylePreprocessorOptions": {
               "includePaths": ["src/assets", "./node_modules/bootstrap/scss"]
             },
-            "scripts": ["./node_modules/bootstrap/dist/js/bootstrap.min.js"]
+            "scripts": [
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "./node_modules/medium-editor/dist/js/medium-editor.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -73,7 +78,8 @@
         },
         "serve": {
           "options": {
-            "port": 5223
+            "port": 5223,
+            "disableHostCheck": true
           },
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
@@ -101,7 +107,10 @@
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "sass",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css", "src/styles.sass"],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "src/styles.sass"
+            ],
             "scripts": []
           }
         }

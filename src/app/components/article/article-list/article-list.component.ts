@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Article } from 'src/app/types/Article';
+import { Article } from 'src/app/dto/Article';
 import { ArticleService } from '../../../services/article.service';
 import { Title, Meta } from '@angular/platform-browser';
 

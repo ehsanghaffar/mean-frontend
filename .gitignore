@@ -44,3 +44,8 @@ testem.log
 .DS_Store
 Thumbs.db
 
+# files
+/public
+app.js
+__MACOSX/
+

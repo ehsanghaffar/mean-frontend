@@ -1,0 +1,136 @@
+
+@use '~@angular/material' as mat;
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~@angular/material/theming';
+
+
+// snackbar theming
+$achieve-primary: (
+  50: #bac6ff,
+  100: #6f82e4,
+  200: #6478d9,
+  300: #4254ad,
+  400: #36479c,
+  500: #24327b,
+  600: #0000f6,
+  700: #1b2769,
+  800: #111b55,
+  900: #0c1447,
+  A100: #716fe4,
+  A200: #6664d9,
+  A400: #3d369c,
+  A700: #2d1b69,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $light-primary-text,
+    400: $light-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  )
+);
+
+$achieve-red: (
+  50: #ff7396,
+  100: #eb5278,
+  200: #d43f64,
+  300: #c33357,
+  400: #b1274a,
+  500: #a12041,
+  600: #951d3b,
+  700: #881935,
+  800: #7c152f,
+  900: #6e1028,
+  A100: #eb5299,
+  A200: #d43f84,
+  A400: #b1275c,
+  A700: #881944,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $dark-primary-text,
+    400: $dark-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  )
+);
+
+$primary: mat-color(mat-palette($achieve-primary));
+$accent: mat-color(mat-palette($achieve-primary, A200, A100, A400));
+$error: mat-color(mat-palette($achieve-red));
+$background: map-get($mat-light-theme-background, 'background');
+$success: mat-color(mat-palette($mat-light-green));
+
+.basic-container {
+  padding: 5px;
+}
+
+.blue-snackbar {
+    background: $primary !important;
+    color: #fff !important;
+}
+
+.success-snackbar {
+    background: $success !important;
+    color: #fff !important;
+
+}
+
+.error-snackbar {
+    background: $error !important;
+    color: #fff !important;
+}
+// End snackbar theming
+
+
+@include mat.core();
+// The "warn" palette is optional and defaults to red if not specified.
+$my-warn: mat.define-palette(mat.$red-palette);
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$edu-frontend-primary: mat.define-palette(mat.$blue-palette);
+$edu-frontend-accent: mat.define-palette(mat.$indigo-palette);
+
+// The warn palette is optional (defaults to red).
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$edu-frontend-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $edu-frontend-primary,
+      accent: $edu-frontend-accent,
+      warn: $my-warn,
+      secondary: #2f2f2f,
+    ),
+  )
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+// @include mat.all-component-themes($edu-frontend-theme);
+@include mat.core-theme($edu-frontend-theme);
+@include mat.button-theme($edu-frontend-theme);
+
+html,
+body {
+  height: 100%;
+}

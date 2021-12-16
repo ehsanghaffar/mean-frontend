@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CanonicalService } from './services/canonical.service';
 import { Meta } from '@angular/platform-browser';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -9,11 +10,17 @@ import { Meta } from '@angular/platform-browser';
 })
 export class AppComponent implements OnInit {
 
-  constructor(private canonicalService: CanonicalService, private metatag: Meta) { }
+  constructor(
+    private canonicalService: CanonicalService,
+    private metatag: Meta,
+    private authService: AuthService
+    ) { }
 
   ngOnInit(): void {
     // canonical url
     this.canonicalService.setCanonicalURL()
+
+    this.authService.autoAuthUser()
 
     // metatags service
     this.metatag.addTags([

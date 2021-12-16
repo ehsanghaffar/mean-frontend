@@ -1,0 +1,75 @@
+<main>
+<div class="container">
+  <div class="row">
+    <section>
+      <div class="text-center">
+        <h1 class="display-5 fw-bold">ورود به وبسایت</h1>
+        <div class="col-lg-8 mx-auto">
+          <p class="lead mb-4">با ورود به سایت از امکانات بیشتر بهره‌مند شوید</p>
+          <p class="manifest-alert">
+            این وبسایت به صورت آزمایشی راه‌اندازی شده است و به زودی تمامی
+            بخش‌های آن فعال خواهد شد
+          </p>
+        </div>
+      </div>
+    </section>
+    <section>
+    <div class="d-flex justify-content-center">
+      <form  [formGroup]="loginFormControl">
+        <div class="col">
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label>ایمیل یا شماره تلفن</mat-label>
+              <input
+            class="label standard-field"
+            type="email"
+            name="email"
+            formControlName="emailFormControl"
+            matInput
+            autocomplete="off"
+            placeholder=" "
+            />
+              <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+              <mat-icon matSuffix>phone</mat-icon>
+              <mat-error *ngIf="errorHandling('emailFormControl', 'required')">
+                ایمیل یا شماره تلفن لازم است
+              </mat-error>
+            </mat-form-field>
+          </p>
+        </div>
+        <div class="col">
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label>رمز عبور</mat-label>
+              <input
+            class="label standard-field"
+            [type]="hide ? 'password' : 'text'"
+            name="password"
+            formControlName="passwordFormControl"
+            matInput
+            autocomplete="off"
+            placeholder=" "
+            />
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+              <mat-error *ngIf="errorHandling('passwordFormControl', 'required')">
+                رمزعبور لازم است
+              </mat-error>
+            </mat-form-field>
+          </p>
+        </div>
+        <button class="w-100 py-2" mat-button type="submit" mat-raised-button color="primary" (click)="onLogin()">
+          ورود
+        </button>
+      </form>
+    </div>
+    <div class="d-flex justify-content-center">
+      <p class=" py-5">
+        عضو نیستی؟<a mat-button color="accent" [routerLink]="['/register']">عضویت سریع</a>
+      </p>
+    </div>
+    </section>
+  </div>
+</div>
+</main>

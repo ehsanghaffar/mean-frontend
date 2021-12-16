@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ArticleService } from '../../../services/article.service';
-import { Article } from '../../../types/Article';
+import { Article } from '../../../dto/Article';
 import { ActivatedRoute } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
 
@@ -34,10 +34,10 @@ export class SingleComponent implements OnInit {
         this.article = article
         this.articleTitle = article.title
         this.articleDesc = article.description
-        this.titleService.setTitle(this.articleTitle)
-        this.metatags.updateTag(
-          { name: 'description', content: this.articleDesc }
-        )
+        // this.titleService.setTitle(this.articleTitle)
+        // this.metatags.updateTag(
+        //   { name: 'description', content: this.articleDesc }
+        // )
       })
 
   }
