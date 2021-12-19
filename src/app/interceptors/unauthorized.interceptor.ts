@@ -20,8 +20,6 @@ export class UnauthorizedInterceptor implements HttpInterceptor {
       tap(e => {
         if (request.method == 'POST' || request.method == 'PUT') {
           if (e instanceof HttpResponse && e.status == 200) {
-            // we can show success messages here if all of them are snack bars
-            // this.snackBar.open('Saved successfully.', 'close', { duration: 2000, panelClass: 'successSnack' });
           }
         }
       }),

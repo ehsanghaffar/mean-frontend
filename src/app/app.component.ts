@@ -17,12 +17,8 @@ export class AppComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    // canonical url
     this.canonicalService.setCanonicalURL()
-
     this.authService.autoAuthUser()
-
-    // metatags service
     this.metatag.addTags([
       { name: 'description', content: 'اولین و تنها وبسایت روستای بزرگ لنجرود' },
       { name: 'robots', content: 'index, follow' },

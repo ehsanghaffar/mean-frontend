@@ -24,7 +24,6 @@ export class NavbarComponent implements OnInit {
           this.isAuthenticated = isAuthenticated;
         })
 
-
     const isSmallScreen = this.breakpointObserver.isMatched('(max-width: 599px)');
     if (isSmallScreen) {
       this.isMobile = true;
@@ -36,5 +35,4 @@ export class NavbarComponent implements OnInit {
   ngOnDestroy() {
     this.authListenerSub.unsubscribe();
   }
-
 }
