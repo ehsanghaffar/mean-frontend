@@ -52,5 +52,4 @@ export class EditorMarkupComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

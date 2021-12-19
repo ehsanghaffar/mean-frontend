@@ -1,7 +1,5 @@
 import { Component, OnInit, Input, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Title, Meta } from '@angular/platform-browser';
-
 import { ArticleService } from '../../../services/article.service'
 import { Article } from '../../../dto/Article';
 import { NgForm } from '@angular/forms';
@@ -23,7 +21,6 @@ export class AddArticleComponent implements OnInit, AfterViewInit {
   content: any;
   @ViewChild('editable', { static: true })
   editable!: ElementRef;
-
   ngAfterViewInit(): void {
     this.editor = new MediumEditor(this.editable.nativeElement, {
       placeholder: {
@@ -61,14 +58,9 @@ export class AddArticleComponent implements OnInit, AfterViewInit {
 
     })
   }
-
-
-  // articleDetails: Article = { title: '', description: '', content: '' }
-
   constructor(
     public articleService: ArticleService,
     public router: Router,
-    private metatags: Meta
   ) { }
 
   ngOnInit() {

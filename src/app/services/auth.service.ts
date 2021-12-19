@@ -143,9 +143,6 @@ export class AuthService {
 
   private setAuthTimer(duration: number) {
     console.log('Setting timer: ' + duration);
-    // big timeout causes instant call
-    // commented for now
-    // this.tokenTimer = setTimeout(() => this.logout(), duration * 1000);
   }
 
   private saveAuthData(token: string, expirationDate: Date) {
@@ -157,7 +154,6 @@ export class AuthService {
     localStorage.removeItem('token');
     localStorage.removeItem('expiration');
   }
-
   private getAuthData() {
     const token = localStorage.getItem('token');
     const expirationDate = localStorage.getItem('expiration');

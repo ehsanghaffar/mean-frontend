@@ -15,7 +15,6 @@ export class ArticleListComponent implements OnInit {
 
   constructor(
     private articlesService: ArticleService,
-    private metatags: Meta,
     private metaTitle: Title
   ) { }
 

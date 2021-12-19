@@ -17,16 +17,12 @@ const routes: Routes = [
   { path: 'articles', component: ArticlesComponent },
   { path: 'articles/create', component: AddArticleComponent, canActivate: [AuthGuard] },
   { path: 'articles/:id', component: SingleComponent },
-
   // auth routes
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
-
   {path: 'panel', component: PanelComponent, canActivate: [AuthGuard] },
-
   { path: '404', component: NotFoundComponent }
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

@@ -23,12 +23,6 @@ export class AppConfigService {
       throw Error('Config file not loaded!');
     }
   }
-
-  // get test() {
-  //   this.checkForConfig();
-  //   return this.appConfig.test;
-  // }
-
   get uploadSizeLimitBytes() {
     return this.appConfig.uploadLimitSizeByte;
   }
