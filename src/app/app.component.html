@@ -1,5 +1,12 @@
 <app-navbar></app-navbar>
 <main class="container">
+  <!-- <div class="progress" *ngIf="loading"> 
+  <mat-progress-bar value="30"  mode="indeterminate"></mat-progress-bar>
+  </div> -->
+  <div class="progress" *ngIf="loading">
+    <mat-progress-bar [value]="value" mode="determinate"></mat-progress-bar>
+  </div>
+
   <router-outlet></router-outlet>
 </main>
 <app-footer></app-footer>
