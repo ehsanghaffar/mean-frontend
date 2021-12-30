@@ -22,7 +22,8 @@ export class ArticleListComponent implements OnInit {
     this.loading = true
     this.articlesService.getArticles().subscribe(res => {
       this.loading = false;
-      this.articles = res
+      this.articles = res.articles
+      console.log(this.articles)
       this.metaTitle.setTitle(this.articleListTitle)
     })
   }

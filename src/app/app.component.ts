@@ -36,7 +36,6 @@ export class AppComponent implements OnInit, OnDestroy {
             this.time = setInterval(() => {
               this.loading = true;
               this.value++
-              console.log('NavigationStart:' + this.value);
             }, 25)
           }
             break;

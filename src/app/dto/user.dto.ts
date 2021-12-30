@@ -5,4 +5,13 @@ export interface User {
   token?: string;
   expiresIn?: number;
   confirmPassword?: string;
+  articles?: UserArticle[];
+}
+
+
+export interface UserArticle {
+  id?: string;
+  title?: string;
+  description?: string;
+  auther?: string;
 }

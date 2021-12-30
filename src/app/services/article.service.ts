@@ -1,3 +1,4 @@
+import { User } from 'src/app/dto/user.dto';
 import { Injectable } from '@angular/core';
 import { catchError, map } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs'
@@ -23,16 +24,36 @@ export class ArticleService {
   }
   // get all articles
   getArticles() {
-    return this.httpClient.get(`${this.config.apiPrefix}articles`);
+    return this.httpClient.get<{
+      articlesCount: number,
+      articles: Article[]
+    }>(`${this.config.apiPrefix}articles`);
   }
-  getSingleArticle(id: any): Observable<Article> {
+
+
+  getSingleArticle(id: any): Observable<any> {
     const url = `${this.config.apiPrefix}articles/${id}`;
-    return this.httpClient.get<any>(url)
+    return this.httpClient.get<{
+      data: Article
+    }>(url)
       .pipe(
         map(articles => articles), 
         catchError(this.handleError)
       );
   }
+
+  // get user articles
+  getUserArticles(id: any): Observable<any> {
+    const url = `${this.config.apiPrefix}users/${id}`;
+    return this.httpClient.get<{
+      user: User
+    }>(url)
+      .pipe(
+        map(user => user),
+        catchError(this.handleError)
+      );
+  }
+
   // Update
   updateArticle(id: any, data: any): Observable<any> {
     return this.httpClient.put(`${this.config.apiPrefix}articles/update/${id}`, data, { headers: this.httpHeaders })
