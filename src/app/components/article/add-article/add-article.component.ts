@@ -16,6 +16,7 @@ export class AddArticleComponent implements OnInit, AfterViewInit {
   loading: boolean = false;
   error: any;
   article: Article
+  isShowEditor: boolean = false;
 
   editor: any;
   content: any;
@@ -30,6 +31,7 @@ export class AddArticleComponent implements OnInit, AfterViewInit {
       toolbar: {
         allowMultiParagraphSelection: true,
         static: true,
+        sticky: true,
         buttons: ['bold', 'italic', 'underline', 'justifyCenter', 'anchor', 'h2', 'h3', 'h4', 'h5', 'quote',
           {
             name: 'pre',
@@ -84,6 +86,11 @@ export class AddArticleComponent implements OnInit, AfterViewInit {
       this.error = error;
     }
     )
+  }
+
+// click event for disable editor
+  onClick(event: any) {
+    this.isShowEditor = false;
   }
 
 }

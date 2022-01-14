@@ -1,1 +1,6 @@
-<div class="app-editor p-2 rounded-2" #editable [innerHtml]="content"></div>
+<div class="container mt-3 ">
+  <div class="row d-flex justify-content-center">
+     <div #editable class='col-md-6' style="min-height: 85vh"></div>
+     <div *ngIf="editor" class="col-md-6 shadow" [innerHTML]="editor.elements[0].innerHTML"></div>
+  </div>
+</div>

@@ -18,6 +18,8 @@ export class EditorMarkupComponent implements OnInit {
     this.editor = new MediumEditor(this.editable.nativeElement, {
 
       toolbar: {
+        sticky: true,
+        static: true,
         allowMultiParagraphSelection: true,
         buttons: ['bold', 'italic', 'underline', 'anchor', 'h2', 'h3', 'h4', 'h5', 'quote',
           {
