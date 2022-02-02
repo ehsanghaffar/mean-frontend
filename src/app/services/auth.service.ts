@@ -123,7 +123,6 @@ export class AuthService {
         console.log(error)
       }
       );
-
   }
 
   autoAuthUser() {
