@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs';
 import { Router } from '@angular/router';
 import { AppConfigService } from './app-config.service';
@@ -80,13 +80,13 @@ export class AuthService {
             this.setAuthTimer(expiresIn);
             this.isAuthenticated = true;
             this.authStatusListener.next(true);
-          const now = new Date();
-          const expirationDate = new Date(
-            now.getTime() + expiresIn * 1000
-          );
-          this.saveAuthData(token, expirationDate);
-          this.extractRolesFromToken();
-          this.router.navigate(['/login']);
+            const now = new Date();
+            const expirationDate = new Date(
+              now.getTime() + expiresIn * 1000
+            );
+            this.saveAuthData(token, expirationDate);
+            this.extractRolesFromToken();
+            this.router.navigate(['/login']);
           }
         },
         (error) => {
@@ -118,10 +118,10 @@ export class AuthService {
           this.router.navigate(['/'])
         }
       },
-      (error) => {
-        this.error = error;
-        console.log(error)
-      }
+        (error) => {
+          this.error = error;
+          console.log(error)
+        }
       );
 
   }
