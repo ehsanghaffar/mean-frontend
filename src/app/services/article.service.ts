@@ -25,11 +25,12 @@ export class ArticleService {
   getArticles() {
     return this.httpClient.get(`${this.config.apiPrefix}articles`);
   }
+
   getSingleArticle(id: any): Observable<Article> {
     const url = `${this.config.apiPrefix}articles/${id}`;
     return this.httpClient.get<any>(url)
       .pipe(
-        map(articles => articles), 
+        map(articles => articles),
         catchError(this.handleError)
       );
   }

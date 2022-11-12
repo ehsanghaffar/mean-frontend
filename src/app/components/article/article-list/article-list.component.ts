@@ -22,9 +22,10 @@ export class ArticleListComponent implements OnInit {
     this.loading = true
     this.articlesService.getArticles().subscribe(res => {
       this.loading = false;
-      this.articles = res
+      const resObj = JSON.parse(JSON.stringify(res))
+      this.articles = resObj.articles
       this.metaTitle.setTitle(this.articleListTitle)
+      console.log(res)
     })
   }
-
 }
