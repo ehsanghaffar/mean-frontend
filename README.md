@@ -1,12 +1,10 @@
-# Lanjrud website Front-End
-
-<img src="./src/assets/images/lanjrud.png" alt="lanjrud website" width="300" />
+# Angular App
 
 [![wakatime](https://wakatime.com/badge/github/ehsanghaffarii/lanjrud-angular.svg)](https://wakatime.com/badge/github/ehsanghaffarii/lanjrud-angular)
 
-Front End of Lanjrud website: [here](https://www.lanjrud.ir)
+Example app with Angular 12 + Angular CLI + Bootstarp 5
 
-This project is create by Angular 12
+[Demo](https://www.lanjrud.ir)
 
 ## features
 
